@@ -1,5 +1,5 @@
 # Binaries
-crashforge
+./crashforge
 *.exe
 *.exe~
 *.dll
