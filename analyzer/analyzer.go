@@ -10,15 +10,15 @@ import (
 
 // ErrorGroup represents a group of similar errors.
 type ErrorGroup struct {
-	ID         string              `json:"id"`
-	ErrorType  string              `json:"error_type"`
-	Message    string              `json:"message"`
-	Count      int                 `json:"count"`
-	FirstSeen  string              `json:"first_seen,omitempty"`
-	LastSeen   string              `json:"last_seen,omitempty"`
-	Errors     []*parser.ErrorInfo `json:"errors"`
-	TopFrames  []FrameStat         `json:"top_frames"`
-	Sample     *parser.ErrorInfo   `json:"sample"`
+	ID        string              `json:"id"`
+	ErrorType string              `json:"error_type"`
+	Message   string              `json:"message"`
+	Count     int                 `json:"count"`
+	FirstSeen string              `json:"first_seen,omitempty"`
+	LastSeen  string              `json:"last_seen,omitempty"`
+	Errors    []*parser.ErrorInfo `json:"errors"`
+	TopFrames []FrameStat         `json:"top_frames"`
+	Sample    *parser.ErrorInfo   `json:"sample"`
 }
 
 // FrameStat represents statistics for a stack frame.
@@ -31,8 +31,8 @@ type FrameStat struct {
 
 // AnalysisResult contains the full analysis of error logs.
 type AnalysisResult struct {
-	TotalErrors int          `json:"total_errors"`
-	UniqueCount int          `json:"unique_count"`
+	TotalErrors int           `json:"total_errors"`
+	UniqueCount int           `json:"unique_count"`
 	Groups      []*ErrorGroup `json:"groups"`
 	TopFiles    []FileStat    `json:"top_files"`
 	TopErrors   []ErrorStat   `json:"top_errors"`
@@ -40,8 +40,8 @@ type AnalysisResult struct {
 
 // FileStat represents file error frequency.
 type FileStat struct {
-	File      string `json:"file"`
-	ErrorCount int   `json:"error_count"`
+	File       string `json:"file"`
+	ErrorCount int    `json:"error_count"`
 }
 
 // ErrorStat represents error type frequency.

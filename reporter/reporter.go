@@ -21,9 +21,9 @@ const (
 
 // Reporter generates reports from analysis results.
 type Reporter struct {
-	format    Format
-	verbose   bool
-	analyzer  *analyzer.Analyzer
+	format   Format
+	verbose  bool
+	analyzer *analyzer.Analyzer
 }
 
 // New creates a new Reporter.
